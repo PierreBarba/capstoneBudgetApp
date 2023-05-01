@@ -1,2 +1,0 @@
-class TransactionGroupJoinTable < ApplicationRecord
-end
