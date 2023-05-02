@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root 'splashs#index'
   resources :splashs, only: [:index, :show, :new, :create]
+  resources :groups
 end
