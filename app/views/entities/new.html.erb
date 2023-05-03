@@ -10,10 +10,10 @@
   </div>
   <div class = "newEntityBody">
     <div class="fieldNameNewEntity">
-      <%= f.text_field :name, autocomplete: "Entity name", placeholder: "Name", class: "loginField" %>
+      <%= f.text_field :name, autocomplete: "Entity name", placeholder: "Name", class: "loginField", require: true %>
     </div>
     <div class="fieldNameNewEntity">
-      <%= f.text_field :amount, autocomplete: "Amount", placeholder: "Amount", class: "loginField" %>
+      <%= f.text_field :amount, autocomplete: "Amount", placeholder: "Amount", class: "loginField", require: true %>
     </div>
     <div class="fieldNameNewEntity">
       <% @groups.each do |group| %>

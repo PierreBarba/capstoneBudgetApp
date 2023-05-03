@@ -7,6 +7,12 @@ class EntitiesController < ApplicationController
     @groups = current_user.groups
   end
 
+  def destroy
+    @entity = Entity.find(params[:id]).destroy
+    respond_to do |f|
+      f.html { redirect_to group_path(@group), notice: 'The Transaction has been deleted successfully' }
+    end
+  end
   
   def create
     @current_user = current_user
