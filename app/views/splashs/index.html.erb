@@ -1,7 +1,6 @@
-Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'images')
 <div class="splash">
   <div class="splash-title">
-  <%= image_tag "spendLogo.png", :class => "splash_logo" %>
+    <%= image_tag asset_path("spendLogo.png"), class: "splash_logo" %>
     <h1 class="splash-text">BUDGET</h1>
   </div>
   <div class="splash-buttons-container">
