@@ -1,0 +1,79 @@
+<%= form_with model: @group, url: groups_path, method: :post, local: true, html: { class: "newCategoryForm" } do |f| %>
+    <div class="newCategHeader">
+      <div class ="backArrow">
+        <%= link_to groups_path do %>
+          <%= image_tag "back_arrow.png", alt: "Back Arrow", class: "backArrowImg" %>
+        <% end %>
+      </div>
+      <h2>ADD CATEGORY</h2>
+      <%= f.submit "Create", class: "submitNewCategory" %>
+    </div>
+    <div class="fieldNameNewCategory">
+      <%= f.text_field :name, autocomplete: "Group name", placeholder: "Name", class: "loginField" %>
+    </div>
+  
+    <div class="iconGrid">
+      <h2>SELECT AN ICON</h2>
+      <div class="iconRow">
+        <div class="iconItem">
+          <%= f.radio_button :icon, "clothes.png" %>
+          <%= label_tag :clothes do %>
+            <%= image_tag "clothes.png", alt: "Clothes budget Icon", class: "iconImg" %>
+          <% end %>
+        </div>
+        <div class="iconItem">
+          <%= f.radio_button :icon, "entertainment.png" %>
+          <%= label_tag :entertainment do %>
+            <%= image_tag "entertainment.png", alt: "Entertainment budget Icon", class: "iconImg" %>
+          <% end %>
+        </div>
+        <div class="iconItem">
+          <%= f.radio_button :icon, "budget.png" %>
+          <%= label_tag :feeding do %>
+            <%= image_tag "budget.png", alt: "Feeding budget Icon", class: "iconImg" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="iconRow">
+        <div class="iconItem">
+          <%= f.radio_button :icon, "house.png" %>
+          <%= label_tag :house do %>
+            <%= image_tag "house.png", alt: "House budget Icon", class: "iconImg" %>
+          <% end %>
+        </div>
+        <div class="iconItem">
+          <%= f.radio_button :icon, "education.png" %>
+          <%= label_tag :education do %>
+            <%= image_tag "education.png", alt: "Education budget Icon", class: "iconImg" %>
+          <% end %>
+        </div>
+        <div class="iconItem">
+          <%= f.radio_button :icon, "car.png" %>
+          <%= label_tag :transportation do %>
+            <%= image_tag "car.png", alt: "Transportation budget Icon", class: "iconImg" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="iconRow">
+        <div class="iconItem">
+          <%= f.radio_button :icon, "pig.png" %>
+          <%= label_tag :default do %>
+            <%= image_tag "pig.png", alt: "Default budget Icon", class: "iconImg" %>
+          <% end %>
+        </div>
+        <div class="iconItem">
+          <%= f.radio_button :icon, "puppie.png" %>
+          <%= label_tag :default do %>
+            <%= image_tag "puppie.png", alt: "Default budget Icon", class: "iconImg" %>
+          <% end %>
+        </div>
+        <div class="iconItem">
+          <%= f.radio_button :icon, "hospital.png" %>
+          <%= label_tag :default do %>
+            <%= image_tag "hospital.png", alt: "Default budget Icon", class: "iconImg" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  
+  <% end %>

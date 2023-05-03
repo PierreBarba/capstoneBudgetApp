@@ -1,0 +1,38 @@
+<section class="categoryConte">
+  <div class="categoryHeader">
+    <div class ="backArrow">
+      <%= link_to groups_path do %>
+        <%= image_tag "back_arrow.png", alt: "Back Arrow", class: "backArrowImg" %>
+      <% end %>
+    </div>
+    <h2>TRANSACTIONS</h2>
+    <div class="dummy" >Not</div>
+  </div>
+  <div class="category-details-container">
+    <div class="categoryInfo">
+      <div class="groupIcon">
+        <%= image_tag @group.icon, alt: "Group Icon", class: "groupImg"%>
+      </div>
+      <div class="groupNameContainer">
+        <h3 class="groupName">
+          <%= @group.name %>
+        </h3>
+      </div>
+    </div>
+    <div class="total-amount-container">
+      <p>Total:</p>
+      <p>$ <%= @group.entities.sum(:amount) %></p>
+    </div>
+    <div class="entitiesContainer1">
+      <% @entities.each do |entity| %>
+        <div class="entityContainerf">
+          <p><%= entity.name %></p>
+          <p>$ <%= entity.amount %></p>
+        </div>
+      <% end %>
+    </div>
+    <div class="newEntityDevice">
+      <%= link_to "ADD AN EXPENSE", new_group_entity_path(@group), class: "newEntity" %>
+    </div>
+  </div>
+</section>
