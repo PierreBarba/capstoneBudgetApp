@@ -115,6 +115,10 @@
     height: auto;
   }
   
+  .profilePictureImg:hover{
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 41%;
+  }
   .submitNext,
   .submitLogin,
   .submitNewCategory,
@@ -135,7 +139,7 @@
     width: 45px;
     height: auto;
   }
-  
+
   .profileContainer p {
     margin-left: 8px;
   }
@@ -158,7 +162,7 @@
   
   .registrationField:hover,
   .loginField:hover {
-    background-color: #e4e6f7;
+    background-color: #c1d8e6;
   }
   
   .fieldNameLogin,
