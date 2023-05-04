@@ -1,41 +1,44 @@
 <section class="containerCategories">
   <div class="categoriesHeader">
-      <div class ="hamburger">
-        <%= image_tag "hamburger.png", alt: "Hamburger Icon", class: "hamburgerImg"%>
-      </div>
-      <h2>CATEGORIES</h2>
-      <div class ="search">
-        <%= image_tag "search.png", alt: "Search Icon", class: "searchImg"%>
-      </div>
+    <div class="hamburger">
+      <%= image_tag "hamburger.png", alt: "Hamburger Icon", class: "hamburgerImg" %>
+    </div>
+    <h2>CATEGORIES</h2>
+    <div class="search">
+      <%= image_tag "search.png", alt: "Search Icon", class: "searchImg" %>
+    </div>
   </div>
   <div class="categoriesSubHeader">
-      <div>
-          <p class="left"> Most ancient</p>
-      </div>
-      <div>
+    <div>
+      <p class="left"> Most ancient</p>
+    </div>
+    <div>
       <p> Most recent</p>
-      </div>
-      <div class="dummy" >Not to show</div>
+    </div>
+    <div class="dummy">Not to show</div>
   </div>
+  <%= button_to '< Sign out', destroy_user_session_path, method: :delete, class: "destroyBtnSes" %>
   <ul class="groups">
-     <% @groups.each do |group| %>
+    <% @groups.each do |group| %>
+      <% if user_signed_in? && group.user_id == current_user.id %>
         <li class="groupContainer">
-            <div class="groupIcon">
-                <%= image_tag group.icon, alt: "Group Icon", class: "groupImg"%>
-            </div>
-            <div class="groupNameContainer">
-              <h3>
-                <%= link_to group.name, group_path(group), { class: "groupName" } %>
-              </h3>
-              <p class="groupUpDated ">
-                <%= group.updated_at.strftime('%d %b %Y')%>
-              </p>
-            </div>
-            <p class="groupAmount"> $ <%= group.entities.sum(:amount) %></p>
+          <div class="groupIcon">
+            <%= image_tag group.icon, alt: "Group Icon", class: "groupImg" %>
+          </div>
+          <div class="groupNameContainer">
+            <h3>
+              <%= link_to group.name, group_path(group), { class: "groupName" } %>
+            </h3>
+            <p class="groupUpDated">
+              <%= group.updated_at.strftime("%d %b %Y") %>
+            </p>
+          </div>
+          <p class="groupAmount">$ <%= group.entities.sum(:amount) %></p>
         </li>
+      <% end %>
     <% end %>
   </ul>
   <div class="newCategoryDevice">
-    <%= link_to "ADD CATEGORY", new_group_path, class: "newCategory" %>
+    <%= link_to "ADD CATEGORY", new_group_path, { class: "newCategory" } %>
   </div>
 </section>

@@ -358,10 +358,6 @@
     border-top: 1px solid #ddd;
   }
 
-  .deleteButton {
+  .destroyBtnSes{
     background-color: red;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
   }
