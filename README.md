@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="spend.png" alt="logo" width="280"  height="auto" />
+  <img src="/spend.png" alt="logo" width="280"  height="auto" />
   <br/><br/>
 
   <h2><b>BLOG APP</b></h2>
