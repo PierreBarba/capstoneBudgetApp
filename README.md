@@ -60,6 +60,13 @@ This project was implemented using:
   </ul>
 </details>
 
+<br>
+## 🚀 Live Demo
+  <ul>
+    <li><a href="https://app-budget-new.onrender.com/">Live Demo Link</a></li>
+    <li><a href="https://www.loom.com/share/f6b0aff83c8f4fd59991f37a127d6b8b/">Live Presentation Link</a></li>
+  </ul>
+
 ### Key Features <a name="key-features"></a>
 
 - **Can persist user data to database**
