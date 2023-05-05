@@ -147,7 +147,7 @@
 }
 
 .field {
-  border-top: 0px rgb(243, 243, 243);
+  border-top: 0 rgb(243, 243, 243);
   display: flex;
   padding-left: 15px;
   background-color: white;
