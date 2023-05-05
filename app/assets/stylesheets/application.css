@@ -358,13 +358,3 @@
   justify-content: space-between;
   border-top: 1px solid #ddd;
 }
-
-.destroyBtnSes {
-  background-color: red;
-  color: #3778c2;
-}
-
-.groupContainerButton {
-  background-color: red !important;
-  z-index: 50;
-}
