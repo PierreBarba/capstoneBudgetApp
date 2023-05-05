@@ -13,20 +13,20 @@ RSpec.describe EntitiesController, type: :request do
   end
 
   describe 'GET #new' do
-  before do
-    get new_group_entity_path(group_id: @group.id)
-  end
+    before do
+      get new_group_entity_path(group_id: @group.id)
+    end
 
-  it 'should returns a successful response' do
-    expect(response).to be_successful
-  end
+    it 'should returns a successful response' do
+      expect(response).to be_successful
+    end
 
-  it 'should displays the index template' do
-    expect(response).to render_template(:new)
-  end
+    it 'should displays the index template' do
+      expect(response).to render_template(:new)
+    end
 
-  it 'should displays the correct page name' do
-    expect(response.body).to include('ADD EXPENSE')
+    it 'should displays the correct page name' do
+      expect(response.body).to include('ADD EXPENSE')
+    end
   end
-end
 end

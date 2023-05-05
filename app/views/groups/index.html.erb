@@ -17,7 +17,7 @@
     </div>
     <div class="dummy">Not to show</div>
   </div>
-  <%= button_to '< Sign out', destroy_user_session_path, method: :delete, class: "destroyBtnSes" %>
+  <%= button_to '< Sign out', destroy_user_session_path, method: :delete, class: "groupContainerButton", style: "background: #e73f3f; margin: 5px 0px 0px 90%; border-radius: 5px; border-top: 1.5px solid #898989; border-left: 1.5px solid #898989; border-right: 1px solid #858585; border-bottom: 1px solid #858585; color: aliceblue; font-family: proxima-nova, sans-serif;" %>
   <ul class="groups">
     <% @groups.each do |group| %>
       <% if user_signed_in? && group.user_id == current_user.id %>
