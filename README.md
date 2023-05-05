@@ -1,10 +1,10 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="/spend.png" alt="logo" width="280"  height="auto" />
+  <img src="spend.png" alt="logo" width="280"  height="auto" />
   <br/><br/>
 
-  <h2><b>BLOG APP</b></h2>
+  <h2><b>BUDGET APP</b></h2>
 
   <br/>
 
@@ -73,7 +73,7 @@ This project was implemented using:
 
 - **Can persist user data to database**
 - **Can persist posts data to database**
-- **Can persist comments and likes database**
+- **Can persist the categories**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,7 +165,7 @@ We will implement this on the future:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/PierreBarba/BlogApp.git).
+Feel free to check the [issues page](https://github.com/PierreBarba/capstoneBudgetApp.git).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
