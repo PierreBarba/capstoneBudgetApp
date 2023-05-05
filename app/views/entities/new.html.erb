@@ -16,11 +16,13 @@
       <%= f.text_field :amount, autocomplete: "Amount", placeholder: "Amount", class: "loginField", require: true %>
     </div>
     <div class="fieldNameNewEntity">
-      <% @groups.each do |group| %>
-        <p>
-          <%= f.check_box :category_id, { multiple: true }, group.id, nil %>
-          <%= group.name %>
-        </p>
+      <% if @groups.present? %>
+        <% @groups.each do |group| %>
+          <p>
+            <%= f.check_box :category_id, { multiple: true }, group.id, nil %>
+            <%= group.name %>
+          </p>
+        <% end %>
       <% end %>
     </div>
   </div>
