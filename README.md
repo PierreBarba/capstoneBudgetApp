@@ -61,7 +61,9 @@ This project was implemented using:
 </details>
 
 <br>
+
 ## 🚀 Live Demo
+
   <ul>
     <li><a href="https://app-budget-new.onrender.com/">Live Demo Link</a></li>
     <li><a href="https://www.loom.com/share/f6b0aff83c8f4fd59991f37a127d6b8b/">Live Presentation Link</a></li>
@@ -117,7 +119,7 @@ To clone this repository to your desired folder:
 - You can download the **Zip** file from the GitHub repository, or clone the repository with:
 
 ```console
-git clone https://github.com/PierreBarba/BlogApp.git
+git clone https://github.com/PierreBarba/capstoneBudgetApp.git
 ```
 
 - Access the cloned directory with:
@@ -175,8 +177,12 @@ Give a ⭐️ if you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+- This work, "BUDGET APP", is a web page implementation of "Snapscan" by Gregoire Vella, used under CC BY 4.0.
+
 - Hat tip to anyone whose code was used.
+
 - Thanks for all the curated content that was provided to us.
+
 - Thanks to my learning and coding partners for all their support.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
