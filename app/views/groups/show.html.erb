@@ -1,0 +1,41 @@
+<section class="categoryConte">
+  <div class="categoryHeader">
+    <div class ="backArrow">
+      <%= link_to groups_path do %>
+        <%= image_tag "back_arrow.png", alt: "Back Arrow", class: "backArrowImg" %>
+      <% end %>
+    </div>
+    <h2>TRANSACTIONS</h2>
+    <div class="dummy" >Not</div>
+  </div>
+  <div class="category-details-container">
+    <div class="categoryInfo">
+      <div class="groupIcon">
+        <%= image_tag @group.icon, alt: "Group Icon", class: "groupImg"%>
+      </div>
+      <div class="groupNameContainer">
+        <h3 class="groupName">
+          <%= @group.name %>
+        </h3>
+      </div>
+    </div>
+    <div class="total-amount-container">
+      <p>Total:</p>
+      <p>$ <%= @group.entities.sum(:amount) %></p>
+    </div>
+    <div class="entitiesContainer1">
+      <% @entities.each do |entity| %>
+        <div class="entityContainerf">
+          <p><%= entity.name %></p>
+          <p>$ <%= entity.amount %></p>
+        </div>
+        <div>
+        <%= button_to "Delete", group_entity_path(@group, entity), method: :delete, data: { turbo_confirm: "Are you sure?" }, class: "deleteButton", style: "background: #e73f3f; margin: 5px 0px 0px 0%; border-radius: 5px; border-top: 1.5px solid #898989; border-left: 1.5px solid #898989; border-right: 1px solid #858585; border-bottom: 1px solid #858585; color: aliceblue; font-family: proxima-nova, sans-serif;"%>
+        </div>
+      <% end %>
+    </div>
+    <div class="newEntityDevice">
+      <%= link_to "ADD AN EXPENSE", new_group_entity_path(@group), class: "newEntity" %>
+    </div>
+  </div>
+</section>
